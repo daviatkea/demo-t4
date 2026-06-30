@@ -32,6 +32,7 @@ if (eventPass) {
   const reasonOutput = document.querySelector(".reason-output");
   const hypeLevel = document.querySelector(".hype-level");
   const copyLinkButton = document.querySelector(".copy-link-button");
+  const copyStatus = document.querySelector(".copy-status");
 
   const params = new URLSearchParams(window.location.search);
 
@@ -71,7 +72,8 @@ if (eventPass) {
     hypeLevel.textContent = "Tvunget af chefen, så nej!";
   }
 
-  copyLinkButton.addEventListener("click", () => {
+  copyLinkButton.addEventListener("click", function () {
     navigator.clipboard.writeText(window.location.href);
+    copyStatus.textContent = "Linket er kopieret";
   });
 }
