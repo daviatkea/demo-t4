@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design dit event-pass | Design Tomorrow 2027</title>
+  <link rel="stylesheet" href="./starter.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="/">Logo</a>
+    <nav class="site-nav">
+      <button command="toggle-popover" commandfor="menu">Menu</button>
+      <ul class="menu" id="menu" popover>
+        <li><a href="./">Home</a></li>
+        <li><a href="./svg.html">Explore</a></li>
+        <li><a href="./form.html">Pass</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Design dit event-pass</h1>
+    <article class="form-wrapper">
+      <header>
+        <h2>Opret dit event-pass her</h2>
+        <p>Svar på et par korte spørgsmål, så sammensætter vi et personligt pass med din stil, dine interesser og dit anbefalede program.</p>
+      </header>
+      <form class="pass-form" action="./opsamling.html">
+        <div class="form-group">
+          <label for="nickname">Hvad skal vi kalde dig?</label>
+          <input type="text" id="nickname" name="nickname">
+        </div>
+        <fieldset class="form-group">
+          <legend>Hvad håber du at få ud af eventet?</legend>
+          <label for="reason-inspiration">
+            <input type="radio" id="reason-inspiration" name="reason" value="inspiration">
+            Ny inspiration
+          </label>
+          <label for="reason-tools">
+            <input type="radio" id="reason-tools" name="reason" value="tools">
+            Praktiske værktøjer
+          </label>
+          <label for="reason-network">
+            <input type="radio" id="reason-network" name="reason" value="network">
+            Nye kontakter
+          </label>
+        </fieldset>
+        <fieldset class="form-group">
+          <legend>Hvad interesserer dig?</legend>
+          <label for="interest-css">
+            <input type="checkbox" id="interest-css" name="interest" value="CSS">
+            CSS
+          </label>
+          <label for="interest-html">
+            <input type="checkbox" id="interest-html" name="interest" value="HTML">
+            HTML
+          </label>
+          <label for="interest-javascript">
+            <input type="checkbox" id="interest-javascript" name="interest" value="JavaScript">
+            JS
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label for="learning-style">Hvordan lærer du bedst?</label>
+          <select name="learning-style" id="learning-style">
+            <option value="visual">Visuelt</option>
+            <option value="auditive">Auditivt</option>
+            <option value="lbd">Learning by doing</option>
+          </select>
+        </div>
+        <fieldset class="form-group" data-layout="inline">
+          <legend>Hvilken stil tiltaler dig mest?</legend>
+          <label for="style-playful">
+            <input type="radio" id="style-playful" name="style" value="playful">
+            Playful
+          </label>
+          <label for="style-tech">
+            <input type="radio" id="style-tech" name="style" value="tech">
+            Tech
+          </label>
+        </fieldset>
+        <div class="form-group">
+          <label for="slider">Hvor hyped er du?</label>
+          <input type="range" id="slider" name="slider" value="0" max="100" step="10">
+        </div>
+        <fieldset class="form-group" data-layout="inline">
+          <legend>Vælg din accentfarve</legend>
+          <label for="color-red" data-color="red">
+            <input class="color-input" type="radio" id="color-red" name="color" value="red">
+            <span class="visually-hidden">Rød</span>
+          </label>
+          <label for="color-purple" data-color="purple">
+            <input class="color-input" type="radio" id="color-purple" name="color" value="purple">
+            <span class="visually-hidden">Lilla</span>
+          </label>
+        </fieldset>
+        <button type="submit">Generer mit Pass</button>
+      </form>
+    </article>
+  </main>
+  <footer class="site-footer">Footer</footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>

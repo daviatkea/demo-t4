@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program og kort | Design Tomorrow 2027</title>
+  <link rel="stylesheet" href="./starter.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="/">Logo</a>
+    <nav class="site-nav">
+      <button command="toggle-popover" commandfor="menu">Menu</button>
+      <ul class="menu" id="menu" popover>
+        <li><a href="./">Home</a></li>
+        <li><a href="./svg.html">Explore</a></li>
+        <li><a href="./form.html">Pass</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>SVG-siden</h1>
+    <section class="svg-component">
+      <div class="svg-wrapper">
+        <svg class="event-map" viewBox="0 0 1536 1030.48">
+          <use href="bg.svg#background"></use>
+          <use class="robot" href="robot.svg#robot"></use>
+        </svg>
+      </div>
+
+      <article class="panel">
+        <h2>Find rundt</h2>
+        <p>
+          Udforsk områderne og få det fulde udbytte af oplevelsen. Hvert stop
+          byder på inspiration, viden og nye forbindelser.
+        </p>
+        <div class="accordion">
+          <details class="accordion-item" name="accordion" data-position="first" id="details-first">
+            <summary>Welcome Plaza</summary>
+            <div>
+              Some content about First. Lorem, ipsum dolor sit amet
+              consecteturconsectetur adipisicing elit. Quae, quidem.
+            </div>
+          </details>
+          <details class="accordion-item" name="accordion" data-position="second" id="details-second">
+            <summary>Inspiration stage</summary>
+            <div>
+              Some content about Second. Lorem ipsum dolor sit amet
+              consectetur consectetur adipisicing elit. Modi molestias, animi
+              dolorum aperiam qui aperiam qui accusamus quibusdam minima
+              ratione.
+            </div>
+          </details>
+          <details class="accordion-item" name="accordion" data-position="third" id="details-third">
+            <summary>Code Lab</summary>
+            <div>
+              Some content about Third. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Quod nam dolore eveniet sed officia possimus
+              ut ut assumenda, dolorem optio.
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer">Footer</footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design Tomorrow 2027</title>
+  <link rel="stylesheet" href="./starter.css">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="/">Logo</a>
+    <nav class="site-nav">
+      <button command="toggle-popover" commandfor="menu">Menu</button>
+      <ul class="menu" id="menu" popover>
+        <li><a href="./">Home</a></li>
+        <li><a href="./svg.html">Explore</a></li>
+        <li><a href="./form.html">Pass</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="content">
+        <p class="eyebrow">
+          Create
+          <span>//</span>
+          2027
+        </p>
+        <h1>
+          Design
+          <br>
+          tomorrow,
+          <br>
+          <span>together</span>
+        </h1>
+        <p>
+          To inspirerende dage med oplæg, workshops og netværk for nysgerrige
+          designere, udviklere og digitale skabere.
+        </p>
+        <div class="ctas">
+          <a href="./form.html" class="btn" data-variant="primary">Design dit pass</a>
+          <a href="./svg.html" class="btn">Se programmet</a>
+        </div>
+      </div>
+      <div class="visuals">
+        <div class="info">
+          <div class="date">
+            <p>
+              24-26
+              <br>
+              <span>SEPTEMBER</span>
+            </p>
+          </div>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1560298803-1d998f6b5249?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="">
+      </div>
+    </section>
+
+    <section class="stats">
+      <h2 class="visually-hidden">The stats</h2>
+
+      <dl>
+        <div>
+          <dt>Deltagere</dt>
+          <dd>1,000+</dd>
+        </div>
+        <div>
+          <dt>Workshops</dt>
+          <dd>12</dd>
+        </div>
+        <div>
+          <dt>Speakers</dt>
+          <dd>8</dd>
+        </div>
+        <div>
+          <dt>Partnere</dt>
+          <dd>5</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Artikler</h2>
+      <div class="articles">
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
+            alt="">
+          <h3>Heading</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+            delectus illum. Suscipit saepe maiores laboriosam itaque neque
+            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
+            fugit labore?
+          </p>
+          <button command="show-modal" commandfor="popover-1">
+            Open popover
+          </button>
+
+          <dialog id="popover-1" closedby="any">
+            <h2>Her er en popover</h2>
+          </dialog>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
+            alt="">
+          <h3>Heading</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+            delectus illum. Suscipit saepe maiores laboriosam itaque neque
+            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
+            fugit labore?
+          </p>
+          <button command="show-modal" commandfor="popover-2">
+            Open popover
+          </button>
+
+          <dialog id="popover-2" closedby="any">
+            <h2>Her er en popover</h2>
+          </dialog>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
+            alt="">
+          <h3>Heading</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
+            delectus illum. Suscipit saepe maiores laboriosam itaque neque
+            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
+            fugit labore?
+          </p>
+          <button command="show-modal" commandfor="popover-3">
+            Open popover
+          </button>
+
+          <dialog id="popover-3" closedby="any">
+            <h2>Her er en popover</h2>
+          </dialog>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">Footer</footer>
+  <script src="./script.js"></script>
+</body>
+
+</html>
