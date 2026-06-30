@@ -11,7 +11,11 @@
 
 <body>
   <header class="site-header">
-    <a href="/">Logo</a>
+    <a class="site-logo" href="./" aria-label="Create 2027">
+      <span>Create</span>
+      <span class="logo-slash">//</span>
+      <span>2027</span>
+    </a>
     <nav class="site-nav">
       <button command="toggle-popover" commandfor="menu">Menu</button>
       <ul class="menu" id="menu" popover>
@@ -25,9 +29,7 @@
     <section class="hero">
       <div class="content">
         <p class="eyebrow">
-          Create
-          <span>//</span>
-          2027
+          Konference
         </p>
         <h1>
           Design
@@ -62,19 +64,19 @@
     </section>
 
     <section class="stats">
-      <h2 class="visually-hidden">The stats</h2>
+      <h2 class="visually-hidden">Eventet i tal</h2>
 
       <dl>
         <div>
           <dt>Deltagere</dt>
-          <dd>1,000+</dd>
+          <dd>300+</dd>
         </div>
         <div>
           <dt>Workshops</dt>
           <dd>12</dd>
         </div>
         <div>
-          <dt>Speakers</dt>
+          <dt>Oplægsholdere</dt>
           <dd>8</dd>
         </div>
         <div>
@@ -84,72 +86,114 @@
       </dl>
     </section>
 
-    <section>
-      <h2>Artikler</h2>
+    <section class="program-teasers">
+      <header>
+        <p class="eyebrow">Program</p>
+        <h2>Nedslag fra eventet</h2>
+      </header>
       <div class="articles">
         <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
-            alt="">
-          <h3>Heading</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-            delectus illum. Suscipit saepe maiores laboriosam itaque neque
-            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
-            fugit labore?
-          </p>
-          <button command="show-modal" commandfor="popover-1">
-            Open popover
-          </button>
+          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=900&auto=format&fit=crop"
+            alt="Farverige papirer og designmaterialer på et bord">
+          <div class="card-content">
+            <p class="eyebrow">Workshop</p>
+            <h3>Design Systems Workshop</h3>
+            <p>
+              Byg et lille visuelt system med farver, typografi og komponenter,
+              der kan bruges på tværs af et digitalt produkt.
+            </p>
+            <button class="btn" command="show-modal" commandfor="popover-1">
+              Læs mere
+            </button>
+          </div>
 
           <dialog id="popover-1" closedby="any">
-            <h2>Her er en popover</h2>
+            <div class="dialog-content">
+              <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1200&auto=format&fit=crop"
+                alt="Deltagere omkring et bord med noter og laptops">
+              <p class="eyebrow">Workshop</p>
+              <h2>Design Systems Workshop</h2>
+              <p>
+                Vi arbejder med små beslutninger, der gør store interfaces nemmere
+                at bygge: farver, afstande, knapper og genbrugelige mønstre.
+              </p>
+              <form method="dialog">
+                <button class="btn" type="submit">Luk</button>
+              </form>
+            </div>
           </dialog>
         </article>
 
         <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
-            alt="">
-          <h3>Heading</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-            delectus illum. Suscipit saepe maiores laboriosam itaque neque
-            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
-            fugit labore?
-          </p>
-          <button command="show-modal" commandfor="popover-2">
-            Open popover
-          </button>
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=900&auto=format&fit=crop"
+            alt="Kode på en skærm i et mørkt arbejdsrum">
+          <div class="card-content">
+            <p class="eyebrow">Talk</p>
+            <h3>AI Tools in Practice</h3>
+            <p>
+              Se konkrete eksempler på, hvordan AI kan bruges som sparring,
+              researchhjælp og prototypeværktøj i designprocessen.
+            </p>
+            <button class="btn" command="show-modal" commandfor="popover-2">
+              Læs mere
+            </button>
+          </div>
 
           <dialog id="popover-2" closedby="any">
-            <h2>Her er en popover</h2>
+            <div class="dialog-content">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+                alt="Laptop med kode og tekniske visualiseringer">
+              <p class="eyebrow">Talk</p>
+              <h2>AI Tools in Practice</h2>
+              <p>
+                Oplægget viser, hvor AI giver mening i en kreativ proces, og
+                hvor det stadig kræver menneskelige valg, kritik og retning.
+              </p>
+              <form method="dialog">
+                <button class="btn" type="submit">Luk</button>
+              </form>
+            </div>
           </dialog>
         </article>
 
         <article class="card">
-          <img
-            src="https://images.unsplash.com/photo-1515169067868-5387ec356754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODI3MjM0NTN8&ixlib=rb-4.1.0&q=80&w=400"
-            alt="">
-          <h3>Heading</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit,
-            delectus illum. Suscipit saepe maiores laboriosam itaque neque
-            totam tempora, in ex, enim iste adipisci eveniet quas eius quidem
-            fugit labore?
-          </p>
-          <button command="show-modal" commandfor="popover-3">
-            Open popover
-          </button>
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=900&auto=format&fit=crop"
+            alt="Åbent arbejdsområde med borde, stole og store vinduer">
+          <div class="card-content">
+            <p class="eyebrow">Lab</p>
+            <h3>CSS Playground</h3>
+            <p>
+              Eksperimentér med moderne CSS og byg små visuelle effekter, som
+              du kan tage med videre i dine egne projekter.
+            </p>
+            <button class="btn" command="show-modal" commandfor="popover-3">
+              Læs mere
+            </button>
+          </div>
 
           <dialog id="popover-3" closedby="any">
-            <h2>Her er en popover</h2>
+            <div class="dialog-content">
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+                alt="Computer med kode, notesbog og kaffe på et skrivebord">
+              <p class="eyebrow">Lab</p>
+              <h2>CSS Playground</h2>
+              <p>
+                Her prøver du teknikkerne selv: layout, animation, states og små
+                detaljer, der får et interface til at føles færdigt.
+              </p>
+              <form method="dialog">
+                <button class="btn" type="submit">Luk</button>
+              </form>
+            </div>
           </dialog>
         </article>
       </div>
     </section>
   </main>
-  <footer class="site-footer">Footer</footer>
+  <footer class="site-footer">
+    <p class="footer-logo">Create <span>//</span> 2027</p>
+    <p>Digital Design Event</p>
+  </footer>
   <script src="./script.js"></script>
 </body>
 

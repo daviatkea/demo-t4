@@ -85,7 +85,53 @@ p {
 }
 
 h1 {
-  font-family: Eina;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-box: cap alphabetic;
+  font-weight: 550;
+  font-family: system-ui;
+  font-variation-settings: "wdth" 50;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.5ch;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #784fcf;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.35rlh 0.75rlh;
+  border: 1px solid #0003;
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+button.btn,
+.pass-actions .btn {
+  background: #fff;
+}
+
+.btn[data-variant="primary"] {
+  background: #4b217c;
+  color: #fff;
+  border-color: #4b217c;
+}
+
+.btn:focus-visible,
+.copy-link-button:focus-visible {
+  outline: 2px solid #784fcf;
+  outline-offset: 2px;
 }
 
 .site-header,
@@ -95,25 +141,52 @@ h1 {
   outline: 1px solid oklch(0.8 0.03 0);
 }
 
+.site-footer {
+  padding: 1rlh max(1rlh, 50% - 1200px / 2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rlh 1rlh;
+  color: oklch(0.35 0.02 300);
+}
+
+.site-logo,
+.footer-logo {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35ch;
+}
+
+.logo-slash,
+.footer-logo span,
+.pass-brand span {
+  color: #784fcf;
+}
+
+.footer-logo {
+  color: oklch(0.25 0.05 0);
+}
+
 main {
   display: grid;
   grid-template-columns: inherit;
-  row-gap: 1rlh;
+  /* row-gap: 1rlh; */
   grid-column: 1 / -1;
   align-content: start;
-
-  &:not(:has(.hero)) {
-    margin-block: 2rlh;
-  }
 
   > * {
     grid-column: 2;
   }
 }
 
-section {
-  display: grid;
-  border-radius: 12px;
+main > section {
+  padding-block: 3rlh;
 }
 
 .card,
@@ -125,7 +198,7 @@ section {
     margin-bottom: 0.5rlh;
   }
 
-  p {
+  p:not(.eyebrow) {
     color: oklch(0.4 0.025 300);
   }
 }
@@ -143,6 +216,16 @@ img {
 .page-intro {
   max-inline-size: 60ch;
   color: oklch(0.4 0.025 300);
+}
+
+.error-page {
+  gap: 0.75rlh;
+  max-inline-size: 60ch;
+  align-content: start;
+}
+
+.error-page .btn {
+  justify-self: start;
 }
 
 /* Header og navigation */
@@ -242,21 +325,10 @@ img {
   display: grid;
   gap: 1.5rlh;
   padding-inline: max(1rlh, 50% - 75rem / 2);
-  padding-block-end: 1.5rlh;
+  padding-block: 0 1.5rlh;
 
   @media (width > 500px) {
     grid: auto / 1.25fr 2fr;
-  }
-
-  .eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 0.5ch;
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    color: #784fcf;
   }
 
   .content {
@@ -320,20 +392,6 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rlh;
-
-    .btn {
-      padding: 0.35rlh 0.75rlh;
-      border: 1px solid #0003;
-      border-radius: 4px;
-      text-decoration: none;
-      color: inherit;
-
-      &[data-variant="primary"] {
-        background: #4b217c;
-        color: #fff;
-        border-color: #4b217c;
-      }
-    }
   }
 }
 
@@ -343,7 +401,6 @@ img {
   outline: none;
   background: oklch(0.98 0.005 300.22);
   grid-column: 1 / -1;
-  padding-block: 2rlh;
   display: grid;
   grid-template-columns: inherit;
 
@@ -365,7 +422,7 @@ img {
     dt {
       text-transform: uppercase;
       letter-spacing: 1px;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 0.9rem;
       color: #4b217c;
     }
@@ -380,6 +437,11 @@ img {
   }
 }
 
+.program-teasers {
+  display: grid;
+  gap: 0.75rlh;
+}
+
 .articles {
   display: grid;
   gap: 1rlh;
@@ -387,6 +449,66 @@ img {
   @media (width > 700px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.card {
+  padding: 0;
+  overflow: clip;
+  outline: 1px solid oklch(0.8 0.03 0);
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.card > img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1lh;
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+}
+
+.card-content .btn {
+  justify-self: start;
+  margin-block-start: 0.35rem;
+}
+
+dialog {
+  padding: 0;
+  border: none;
+  border-radius: 12px;
+  max-inline-size: min(42rem, calc(100vw - 2rem));
+  background: #fefcfc;
+  color: inherit;
+  box-shadow:
+    0px 0.5px 0.6px hsl(0 0% 0% / 0.06),
+    0px 1.8px 2.3px -0.5px hsl(0 0% 0% / 0.07),
+    0px 4.2px 5.3px -1.1px hsl(0 0% 0% / 0.09),
+    0px 9.7px 12.1px -1.6px hsl(0 0% 0% / 0.1);
+}
+
+dialog::backdrop {
+  background: hsl(0 0% 0% / 0.35);
+}
+
+.dialog-content {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1lh;
+}
+
+.dialog-content img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.dialog-content form {
+  justify-self: start;
 }
 
 /* SVG-side */
@@ -425,7 +547,14 @@ img {
   }
 }
 
+.program-wrapper {
+  display: grid;
+  gap: 1rlh;
+}
+
 .program-map {
+  display: grid;
+  border-radius: 12px;
   overflow: clip;
   box-shadow:
     0px 0.5px 0.6px hsl(0 0% 0% / 0.06),
@@ -557,27 +686,6 @@ img {
   display: grid;
   gap: 1rlh;
   align-content: start;
-}
-
-.form-intro .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.5ch;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  color: #784fcf;
-}
-
-.form-intro h1 {
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  line-height: 1;
-  text-box: cap alphabetic;
-  font-weight: 550;
-  font-family: system-ui;
-  font-variation-settings: "wdth" 50;
 }
 
 .form-intro > p:not(.eyebrow) {
@@ -731,17 +839,6 @@ fieldset {
   align-content: center;
 }
 
-.pass-intro .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 0.5ch;
-  font-weight: 500;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  color: #784fcf;
-}
-
 .pass-intro h1 {
   text-transform: uppercase;
   font-size: 3rem;
@@ -768,7 +865,6 @@ fieldset {
   gap: 0.5rlh;
 }
 
-.pass-actions .btn,
 .copy-link-button {
   padding: 0.35rlh 0.75rlh;
   border: 1px solid #0003;
@@ -848,14 +944,15 @@ fieldset {
   font-weight: 700;
 }
 
-.pass-brand,
+.pass-brand span,
 .pass-year,
-.pass-details dd {
+.logo-slash {
   color: var(--accent-color, var(--purple));
 }
 
 .pass-year {
   color: oklch(0.35 0.02 300);
+  text-align: right;
 }
 
 .pass-identity {

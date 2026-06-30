@@ -11,7 +11,11 @@
 
 <body>
   <header class="site-header">
-    <a href="/">Logo</a>
+    <a class="site-logo" href="./" aria-label="Create 2027">
+      <span>Create</span>
+      <span class="logo-slash">//</span>
+      <span>2027</span>
+    </a>
     <nav class="site-nav">
       <button command="toggle-popover" commandfor="menu">Menu</button>
       <ul class="menu" id="menu" popover>
@@ -22,9 +26,8 @@
     </nav>
   </header>
   <main>
-    <article class="form-wrapper">
+    <section class="form-wrapper">
       <header class="form-intro">
-        <p class="eyebrow">Personligt pass</p>
         <h1>Opret dit event-pass</h1>
         <p>Svar på et par korte spørgsmål, så sammensætter vi et personligt pass med din stil, dine interesser og dit
           anbefalede program.</p>
@@ -138,9 +141,12 @@
         </fieldset>
         <button type="submit">Generer mit Pass</button>
       </form>
-    </article>
+    </section>
   </main>
-  <footer class="site-footer">Footer</footer>
+  <footer class="site-footer">
+    <p class="footer-logo">Create <span>//</span> 2027</p>
+    <p>Digital Design Event</p>
+  </footer>
   <script src="./script.js"></script>
 </body>
 

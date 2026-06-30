@@ -26,6 +26,8 @@ const eventPass = document.querySelector(".event-pass");
 
 if (eventPass) {
   const nicknameOutput = document.querySelector(".nickname");
+  const profileOutput = document.querySelector(".pass-profile");
+  const profileText = document.querySelector(".profile-text");
   const chipOne = document.querySelector(".chip-one");
   const chipTwo = document.querySelector(".chip-two");
   const chipThree = document.querySelector(".chip-three");
@@ -38,7 +40,7 @@ if (eventPass) {
 
   const nickname = params.get("nickname") || "Du";
   const reason = params.get("reason");
-  const color = params.get("color") || "purple";
+  const color = params.get("color") || "orange";
   const style = params.get("style") || "playful";
   const interests = params.getAll("interest");
   const hypeValue = params.get("slider");
@@ -47,6 +49,20 @@ if (eventPass) {
   eventPass.dataset.style = style;
 
   nicknameOutput.textContent = nickname;
+
+  if (style === "tech") {
+    profileOutput.textContent = "Code explorer";
+    profileText.textContent =
+      "går efter at teste ideer i kode og finde ud af, hvordan ting virker.";
+  } else if (style === "editorial") {
+    profileOutput.textContent = "Visual thinker";
+    profileText.textContent =
+      "lægger mærke til form, farver og de visuelle detaljer.";
+  } else {
+    profileOutput.textContent = "Creative builder";
+    profileText.textContent =
+      "trives med at skabe, eksperimentere og finde nye løsninger.";
+  }
 
   if (reason === "inspiration") {
     reasonOutput.textContent = "Ny inspiration";

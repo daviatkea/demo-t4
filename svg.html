@@ -11,7 +11,11 @@
 
 <body>
   <header class="site-header">
-    <a href="/">Logo</a>
+    <a class="site-logo" href="./" aria-label="Create 2027">
+      <span>Create</span>
+      <span class="logo-slash">//</span>
+      <span>2027</span>
+    </a>
     <nav class="site-nav">
       <button command="toggle-popover" commandfor="menu">Menu</button>
       <ul class="menu" id="menu" popover>
@@ -22,54 +26,58 @@
     </nav>
   </header>
   <main>
-    <h1>Program og kort</h1>
-    <p class="page-intro">
-      Her kan du få overblik over eventets vigtigste områder. Åbn punkterne og
-      se robotten flytte sig rundt på kortet.
-    </p>
+    <section class="program-wrapper">
+      <h1>Program og kort</h1>
+      <p class="page-intro">
+        Her kan du få overblik over eventets vigtigste områder. Åbn punkterne og
+        se robotten flytte sig rundt på kortet.
+      </p>
 
-    <section class="program-map">
-      <div class="map-wrapper">
-        <svg class="event-map" viewBox="0 0 1536 1030.48">
-          <use href="bg.svg#background"></use>
-          <use class="robot" href="robot.svg#robot"></use>
-        </svg>
-      </div>
+      <article class="program-map">
+        <div class="map-wrapper">
+          <svg class="event-map" viewBox="0 0 1536 1030.48">
+            <use href="bg.svg#background"></use>
+            <use class="robot" href="robot.svg#robot"></use>
+          </svg>
+        </div>
 
-      <article class="panel">
-        <h2>Udforsk eventet</h2>
-        <p>
-          Vælg et område på programmet og se robotten bevæge sig hen til næste
-          stop. Hvert punkt viser en del af eventet.
-        </p>
-        <div class="accordion">
-          <details class="accordion-item" name="accordion" data-position="first" id="details-first">
-            <summary>Welcome Plaza</summary>
-            <div>
-              Start her, hent dit pass og få overblik over dagens program.
-              Her møder du også de andre deltagere, før oplæggene begynder.
-            </div>
-          </details>
-          <details class="accordion-item" name="accordion" data-position="second" id="details-second">
-            <summary>Inspiration stage</summary>
-            <div>
-              På scenen deler oplægsholdere cases, idéer og metoder fra
-              arbejdet med digitale produkter, design og nye teknologier.
-            </div>
-          </details>
-          <details class="accordion-item" name="accordion" data-position="third" id="details-third">
-            <summary>Code Lab</summary>
-            <div>
-              I Code Lab kan du prøve teknikkerne selv. Tag din computer med,
-              eksperimentér med CSS og byg videre på dagens eksempler.
-            </div>
-          </details>
+        <div class="panel">
+          <h2>Udforsk eventet</h2>
+          <p>
+            Vælg et område på programmet og se robotten bevæge sig hen til næste
+            stop. Hvert punkt viser en del af eventet.
+          </p>
+          <div class="accordion">
+            <details class="accordion-item" name="accordion" data-position="first" id="details-first">
+              <summary>Welcome Plaza</summary>
+              <div>
+                Start her, hent dit pass og få overblik over dagens program.
+                Her møder du også de andre deltagere, før oplæggene begynder.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="second" id="details-second">
+              <summary>Inspiration stage</summary>
+              <div>
+                På scenen deler oplægsholdere cases, idéer og metoder fra
+                arbejdet med digitale produkter, design og nye teknologier.
+              </div>
+            </details>
+            <details class="accordion-item" name="accordion" data-position="third" id="details-third">
+              <summary>Code Lab</summary>
+              <div>
+                I Code Lab kan du prøve teknikkerne selv. Tag din computer med,
+                eksperimentér med CSS og byg videre på dagens eksempler.
+              </div>
+            </details>
+          </div>
         </div>
       </article>
     </section>
-
   </main>
-  <footer class="site-footer">Footer</footer>
+  <footer class="site-footer">
+    <p class="footer-logo">Create <span>//</span> 2027</p>
+    <p>Digital Design Event</p>
+  </footer>
   <script src="./script.js"></script>
 </body>
 

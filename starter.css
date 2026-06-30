@@ -61,6 +61,15 @@ select,
   appearance: base-select;
 }
 
+dialog {
+  overscroll-behavior: none;
+
+  &::backdrop {
+    overflow: hidden;
+    overscroll-behavior: contain;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
