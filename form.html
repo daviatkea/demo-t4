@@ -17,16 +17,31 @@
       <ul class="menu" id="menu" popover>
         <li><a href="./">Forside</a></li>
         <li><a href="./svg.html">Program</a></li>
-        <li><a href="./form.html">Lav pass</a></li>
+        <li><a href="./form.html" data-variant="filled">Opret pass</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Design dit event-pass</h1>
     <article class="form-wrapper">
-      <header>
-        <h2>Opret dit event-pass her</h2>
-        <p>Svar på et par korte spørgsmål, så sammensætter vi et personligt pass med din stil, dine interesser og dit anbefalede program.</p>
+      <header class="form-intro">
+        <p class="eyebrow">Personligt pass</p>
+        <h1>Opret dit event-pass</h1>
+        <p>Svar på et par korte spørgsmål, så sammensætter vi et personligt pass med din stil, dine interesser og dit
+          anbefalede program.</p>
+        <ol class="form-steps">
+          <li>
+            <span>01</span>
+            <p>Vælg dit fokus og de emner, du gerne vil bruge dagen på.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <p>Giv passet en stil og en accentfarve, så det føles som dit eget.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <p>Generér passet og kopiér linket, hvis du vil åbne det igen senere.</p>
+          </li>
+        </ol>
       </header>
       <form class="pass-form" action="./opsamling.html">
         <div class="form-group">
@@ -71,15 +86,19 @@
             <option value="lbd">Learning by doing</option>
           </select>
         </div>
-        <fieldset class="form-group" data-layout="inline">
-          <legend>Hvilken stil tiltaler dig mest?</legend>
-          <label for="style-playful">
-            <input type="radio" id="style-playful" name="style" value="playful">
-            Playful
+        <fieldset class="form-group style-options" data-layout="inline">
+          <legend>Vælg stil til dit pass</legend>
+          <label class="style-option" for="style-editorial">
+            <input type="radio" id="style-editorial" name="style" value="editorial">
+            <span>Editorial</span>
           </label>
-          <label for="style-tech">
+          <label class="style-option" for="style-playful">
+            <input type="radio" id="style-playful" name="style" value="playful" checked>
+            <span>Playful</span>
+          </label>
+          <label class="style-option" for="style-tech">
             <input type="radio" id="style-tech" name="style" value="tech">
-            Tech
+            <span>Tech</span>
           </label>
         </fieldset>
         <div class="form-group">
@@ -92,9 +111,29 @@
             <input class="color-input" type="radio" id="color-red" name="color" value="red">
             <span class="visually-hidden">Rød</span>
           </label>
+          <label for="color-lime" data-color="lime">
+            <input class="color-input" type="radio" id="color-lime" name="color" value="lime">
+            <span class="visually-hidden">Lime</span>
+          </label>
+          <label for="color-orange" data-color="orange">
+            <input class="color-input" type="radio" id="color-orange" name="color" value="orange">
+            <span class="visually-hidden">Orange</span>
+          </label>
+          <label for="color-pink" data-color="pink">
+            <input class="color-input" type="radio" id="color-pink" name="color" value="pink">
+            <span class="visually-hidden">Pink</span>
+          </label>
           <label for="color-purple" data-color="purple">
             <input class="color-input" type="radio" id="color-purple" name="color" value="purple">
             <span class="visually-hidden">Lilla</span>
+          </label>
+          <label for="color-blue" data-color="blue">
+            <input class="color-input" type="radio" id="color-blue" name="color" value="blue">
+            <span class="visually-hidden">Blå</span>
+          </label>
+          <label for="color-teal" data-color="teal">
+            <input class="color-input" type="radio" id="color-teal" name="color" value="teal">
+            <span class="visually-hidden">Turkis</span>
           </label>
         </fieldset>
         <button type="submit">Generer mit Pass</button>

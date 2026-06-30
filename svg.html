@@ -17,14 +17,19 @@
       <ul class="menu" id="menu" popover>
         <li><a href="./">Forside</a></li>
         <li><a href="./svg.html">Program</a></li>
-        <li><a href="./form.html">Lav pass</a></li>
+        <li><a href="./form.html" data-variant="filled">Opret pass</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <h1>Program og kort</h1>
-    <section class="svg-component">
-      <div class="svg-wrapper">
+    <p class="page-intro">
+      Her kan du få overblik over eventets vigtigste områder. Åbn punkterne og
+      se robotten flytte sig rundt på kortet.
+    </p>
+
+    <section class="program-map">
+      <div class="map-wrapper">
         <svg class="event-map" viewBox="0 0 1536 1030.48">
           <use href="bg.svg#background"></use>
           <use class="robot" href="robot.svg#robot"></use>
@@ -62,6 +67,7 @@
         </div>
       </article>
     </section>
+
   </main>
   <footer class="site-footer">Footer</footer>
   <script src="./script.js"></script>
