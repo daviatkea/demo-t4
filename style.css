@@ -325,7 +325,7 @@ img {
   display: grid;
   gap: 1.5rlh;
   padding-inline: max(1rlh, 50% - 75rem / 2);
-  padding-block: 0 1.5rlh;
+  padding-block: 0 3rlh;
 
   @media (width > 500px) {
     grid: auto / 1.25fr 2fr;
