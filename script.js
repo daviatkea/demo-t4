@@ -36,10 +36,10 @@ if (eventPass) {
 
   const params = new URLSearchParams(window.location.search);
 
-  const nickname = params.get("nickname");
+  const nickname = params.get("nickname") || "Du";
   const reason = params.get("reason");
-  const color = params.get("color");
-  const style = params.get("style");
+  const color = params.get("color") || "purple";
+  const style = params.get("style") || "playful";
   const interests = params.getAll("interest");
   const hypeValue = params.get("slider");
 
@@ -63,13 +63,13 @@ if (eventPass) {
   chipThree.textContent = interests[2] || "";
 
   if (hypeValue >= 75) {
-    hypeLevel.textContent = "Crazy";
+    hypeLevel.textContent = "Høj";
   } else if (hypeValue >= 50) {
-    hypeLevel.textContent = "Moderat";
+    hypeLevel.textContent = "Middel";
   } else if (hypeValue >= 25) {
-    hypeLevel.textContent = "Kedelig";
+    hypeLevel.textContent = "Rolig";
   } else {
-    hypeLevel.textContent = "Tvunget af chefen, så nej!";
+    hypeLevel.textContent = "Lav";
   }
 
   copyLinkButton.addEventListener("click", function () {

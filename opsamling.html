@@ -34,7 +34,7 @@
           senere.
         </p>
         <div class="pass-actions">
-          <a class="btn" href="./form.html">Tilpas passet</a>
+          <a class="btn" href="./form.html">Opret nyt pass</a>
           <a class="btn" href="./svg.html">Se programmet</a>
           <button class="copy-link-button" type="button">Kopiér link til dit pass</button>
         </div>
@@ -43,29 +43,57 @@
 
       <div class="pass-stage">
         <div class="lanyard" aria-hidden="true"></div>
-        <article class="event-pass">
-          <header class="logo">Event Logo || 2027</header>
-          <h2>Dit pass</h2>
-          <p class="pass-profile">
-            Creative builder
-          </p>
-          <p><span class="nickname"></span>, du trives med at skabe, eksperimentere og finde nye løsninger.</p>
-          <p>Dit fokus: <span class="reason-output"></span></p>
-          <p>Hype Level: <span class="hype-level"></span></p>
-          <ul class="chips">
-            <li class="chip-one"></li>
-            <li class="chip-two"></li>
-            <li class="chip-three"></li>
-          </ul>
-          <h3>Dit anbefalede program</h3>
-          <dl>
-            <dt>09.30</dt>
-            <dd>Design Systems Workshop</dd>
-            <dt>11.15</dt>
-            <dd>Al Tools in Practice</dd>
-            <dt>13.00</dt>
-            <dd>Hands-on: CSS Playground</dd>
+        <article class="event-pass" aria-labelledby="pass-title">
+          <header class="pass-header">
+            <p class="pass-brand">Design Tomorrow</p>
+            <p class="pass-year">2027</p>
+          </header>
+
+          <section class="pass-identity">
+            <p class="pass-label">Deltagerpass</p>
+            <h2 class="pass-profile" id="pass-title">Creative builder</h2>
+            <p class="pass-description">
+              <span class="nickname"></span> trives med at skabe, eksperimentere og finde nye løsninger.
+            </p>
+          </section>
+
+          <dl class="pass-details">
+            <div>
+              <dt>Fokus</dt>
+              <dd class="reason-output"></dd>
+            </div>
+            <div>
+              <dt>Energi</dt>
+              <dd class="hype-level"></dd>
+            </div>
           </dl>
+
+          <section class="pass-section" aria-labelledby="interests-title">
+            <h3 id="interests-title">Interesser</h3>
+            <ul class="chips">
+              <li class="chip-one"></li>
+              <li class="chip-two"></li>
+              <li class="chip-three"></li>
+            </ul>
+          </section>
+
+          <section class="pass-section" aria-labelledby="program-title">
+            <h3 id="program-title">Anbefalet program</h3>
+            <dl class="pass-program">
+              <div>
+                <dt>09.30</dt>
+                <dd>Design Systems Workshop</dd>
+              </div>
+              <div>
+                <dt>11.15</dt>
+                <dd>AI Tools in Practice</dd>
+              </div>
+              <div>
+                <dt>13.00</dt>
+                <dd>Hands-on: CSS Playground</dd>
+              </div>
+            </dl>
+          </section>
         </article>
       </div>
     </section>
