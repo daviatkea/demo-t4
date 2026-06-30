@@ -1,10 +1,4 @@
 /* Fonts og variabler */
-@font-face {
-  font-family: Eina;
-  src: url("https://assets.codepen.io/3794/Eina-Bold.woff2") format("woff2");
-  font-wight: 100 900;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
 
 html {
