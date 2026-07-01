@@ -1129,3 +1129,9 @@ fieldset {
 .pass-form {
   view-transition-name: pass;
 }
+
+::view-transition-old(pass),
+::view-transition-new(pass) {
+  block-size: 100%;
+  inline-size: 100%;
+}
