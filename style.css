@@ -1215,11 +1215,12 @@ fieldset {
   height: 100%;
 }
 
-::view-transition-old(pass-img),
-::view-transition-new(pass-img) {
-  object-fit: none;
-  object-position: left;
-  overflow: clip;
+::view-transition-group(map) {
+  z-index: 2;
+}
+
+::view-transition-group(pass-img) {
+  z-index: 3;
 }
 
 .card > img {
