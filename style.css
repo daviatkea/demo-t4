@@ -1125,7 +1125,7 @@ fieldset {
   view-transition-name: map;
 }
 
-[data-feature="pass"] img,
+[data-feature="pass"],
 .pass-form {
   view-transition-name: pass;
 }
