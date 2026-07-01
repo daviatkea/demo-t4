@@ -1120,7 +1120,12 @@ fieldset {
   position: static !important;
 }
 
-[data-feature="map"],
+[data-feature="map"] img,
 .map-wrapper {
   view-transition-name: map;
+}
+
+[data-feature="pass"] img,
+.pass-form {
+  view-transition-name: pass;
 }
