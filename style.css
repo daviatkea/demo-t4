@@ -986,6 +986,9 @@ fieldset {
 }
 
 .pass-stage {
+  perspective: 800px;
+  transform-style: preserve-3d;
+  isolation: isolate;
   padding: 2rlh 1rlh;
   /* border: 1px dashed #784fcf;
   background: linear-gradient(
@@ -1002,6 +1005,7 @@ fieldset {
 }
 
 .event-pass {
+  rotate: -1 2 0 -22deg;
   background: #fff;
   width: min(100%, 24rem);
   max-width: -webkit-fill-available;
@@ -1022,6 +1026,14 @@ fieldset {
   gap: 1rem;
   overflow: hidden;
   outline: 2px solid var(--accent-color, var(--purple));
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff5;
+    mask: linear-gradient(135deg, red, #0000 50%);
+  }
 }
 
 .event-pass::before {
