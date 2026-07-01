@@ -1029,6 +1029,7 @@ fieldset {
     inset: 0;
     background: #fff5;
     mask: linear-gradient(135deg, red, #0000 50%);
+    pointer-events: none;
   }
 }
 
