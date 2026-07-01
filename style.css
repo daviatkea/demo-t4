@@ -429,6 +429,7 @@ img {
     justify-content: center;
     rule-inset: 0.5rlh;
     rule: 1px solid #d8d7da;
+    rule-inset-junction: overlap-join;
 
     div {
       display: flex;
