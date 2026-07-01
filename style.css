@@ -1188,22 +1188,22 @@ fieldset {
   position: static !important;
 }
 
-[data-feature="map"] img,
+.map-preview,
 .map-wrapper {
   view-transition-name: map;
 }
 
-[data-feature="pass"],
+.tool-feature,
 .pass-form {
   view-transition-name: pass;
   view-transition-class: morph;
 
-  img {
+  .pass-preview {
     view-transition-name: pass-img;
   }
 
   button,
-  a {
+  [data-variant="primary"] {
     view-transition-name: cta;
   }
 }
