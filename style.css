@@ -647,6 +647,13 @@ dialog::backdrop {
   background: #fff;
   border-radius: 8px;
   border: 1px solid #e5dbf2;
+  transition: border, background;
+  transition-duration: 0.3s;
+
+  &:open {
+    border-color: #784fcf;
+    background: oklch(0.985 0.012 300);
+  }
 
   summary {
     cursor: pointer;
@@ -964,7 +971,8 @@ fieldset {
 
 .event-pass {
   background: #fff;
-  width: min(100%, 22rem);
+  width: min(100%, 24rem);
+  max-width: stretch;
   margin-inline: auto;
   padding: 1rlh;
   border-radius: 18px;
