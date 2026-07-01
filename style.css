@@ -424,9 +424,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     flex-wrap: balance;
-    gap: 2rlh;
+    gap: 3rlh;
     text-align: center;
     justify-content: center;
+    rule-inset: 0.5rlh;
+    rule: 1px solid #d8d7da;
 
     div {
       display: flex;
