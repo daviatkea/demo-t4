@@ -1153,7 +1153,7 @@ fieldset {
 }
 
 .card > img {
-  animation: parallax both;
+  animation: parallax linear both;
   animation-timeline: view();
 }
 
