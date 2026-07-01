@@ -1129,11 +1129,3 @@ fieldset {
 .pass-form {
   view-transition-name: pass;
 }
-
-::view-transition-old(pass),
-::view-transition-new(pass) {
-  height: 100%;
-  object-fit: none;
-  object-position: left;
-  overflow: clip;
-}
