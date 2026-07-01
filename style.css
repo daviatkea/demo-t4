@@ -1114,7 +1114,7 @@ fieldset {
   margin: 0;
 }
 
-/* View Transitions */
+/* View Transitions and scroll animation */
 .site-header {
   view-transition-name: site-header;
   position: static !important;
@@ -1150,4 +1150,18 @@ fieldset {
   object-fit: none;
   object-position: left;
   overflow: clip;
+}
+
+.card > img {
+  animation: parallax both;
+  animation-timeline: view();
+}
+
+@keyframes parallax {
+  from {
+    object-position: bottom;
+  }
+  to {
+    object-position: top;
+  }
 }
