@@ -525,6 +525,58 @@ dialog::backdrop {
   justify-self: start;
 }
 
+.event-tools {
+  display: grid;
+  gap: 1rlh;
+}
+
+.tool-teasers {
+  display: grid;
+  gap: 1rlh;
+
+  @media (width > 600px) {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+  }
+}
+
+.tool-teaser {
+  overflow: clip;
+  border-radius: 12px;
+  outline: 1px solid oklch(0.8 0.03 0);
+  background: #fefcfc;
+  display: grid;
+  box-shadow:
+    0px 0.5px 0.6px hsl(0 0% 0% / 0.04),
+    0px 1.8px 2.3px -0.5px hsl(0 0% 0% / 0.05),
+    0px 4.2px 5.3px -1.1px hsl(0 0% 0% / 0.06);
+
+  img {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    background: oklch(0.97 0.02 300);
+  }
+
+  div {
+    display: grid;
+    gap: 0.6rem;
+    padding: 1lh;
+  }
+
+  p:not(.eyebrow) {
+    color: oklch(0.4 0.025 300);
+  }
+
+  .btn {
+    justify-self: start;
+    margin-block-start: 0.35rem;
+  }
+}
+
+.tool-teaser[data-feature="pass"] img {
+  object-position: center top;
+}
+
 /* SVG-side */
 .robot {
   /*transition: 1.4s;*/
@@ -1060,4 +1112,15 @@ fieldset {
 
 .pass-program dd {
   margin: 0;
+}
+
+/* View Transitions */
+.site-header {
+  view-transition-name: site-header;
+  position: static !important;
+}
+
+[data-feature="map"],
+.map-wrapper {
+  view-transition-name: map;
 }
