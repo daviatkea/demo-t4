@@ -114,6 +114,7 @@ h1 {
   color: inherit;
   background: transparent;
   font: inherit;
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -550,17 +551,9 @@ dialog::backdrop {
 }
 
 .feature-images {
-  position: relative;
   display: grid;
+  grid: 1fr 1rlh 1rlh / 1fr 1rlh 1rlh;
   align-items: end;
-  min-block-size: 18rem;
-  padding: 1rlh;
-  border-radius: 14px;
-  background: linear-gradient(
-    145deg,
-    oklch(0.97 0.03 293.9) 45%,
-    oklch(0.99 0.005 300) 0
-  );
 
   img {
     border-radius: 12px;
@@ -574,26 +567,18 @@ dialog::backdrop {
 }
 
 .map-preview {
+  grid-area: 1 / 1 / -2 / -2;
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
 .pass-preview {
+  grid-area: 1 / 1 / -1 / -1;
   inline-size: min(48%, 16rem);
   justify-self: end;
-  margin-block-start: -4rem;
-  margin-inline-end: 1rlh;
   aspect-ratio: 0.78;
   object-fit: cover;
   object-position: center top;
-
-  @media (width > 600px) {
-    position: absolute;
-    inset-inline-end: 1rlh;
-    inset-block-end: 1rlh;
-    inline-size: min(38%, 15rem);
-    margin: 0;
-  }
 }
 
 .feature-content {
