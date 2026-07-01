@@ -568,8 +568,6 @@ dialog::backdrop {
 
 .map-preview {
   grid-area: 1 / 1 / -2 / -2;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
 }
 
 .pass-preview {
