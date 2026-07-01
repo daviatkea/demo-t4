@@ -1004,6 +1004,7 @@ fieldset {
 .event-pass {
   background: #fff;
   width: min(100%, 24rem);
+  max-width: -webkit-fill-available;
   max-width: stretch;
   margin-inline: auto;
   padding: 1rlh;
