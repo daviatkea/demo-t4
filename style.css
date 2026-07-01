@@ -1200,6 +1200,10 @@ fieldset {
     view-transition-name: pass-img;
   }
 
+  .feature-content {
+    view-transition-name: feature-content;
+  }
+
   button,
   [data-variant="primary"] {
     view-transition-name: cta;
