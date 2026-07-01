@@ -1128,4 +1128,26 @@ fieldset {
 [data-feature="pass"],
 .pass-form {
   view-transition-name: pass;
+  view-transition-class: morph;
+
+  img {
+    view-transition-name: pass-img;
+  }
+
+  button,
+  a {
+    view-transition-name: cta;
+  }
+}
+
+::view-transition-old(.morph),
+::view-transition-new(.morph) {
+  height: 100%;
+}
+
+::view-transition-old(pass-img),
+::view-transition-new(pass-img) {
+  object-fit: none;
+  object-position: left;
+  overflow: clip;
 }
