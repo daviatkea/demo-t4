@@ -298,10 +298,14 @@ img {
     text-decoration: none;
     padding: 0.25rlh 0.5rlh;
     display: inline-block;
+    border-radius: 5px;
+    &[aria-current="page"] {
+      background: #000;
+      background: oklch(0.9 0.02 355.02);
+    }
     &[data-variant="filled"] {
       background: #4b217c;
       color: #fff;
-      border-radius: 5px;
     }
   }
 }
