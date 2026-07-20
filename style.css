@@ -1257,6 +1257,14 @@ fieldset {
   }
 }
 
+:root {
+  view-transition-name: none;
+}
+
+::view-transition {
+  pointer-events: none;
+}
+
 ::view-transition-old(.morph),
 ::view-transition-new(.morph) {
   height: 100%;
