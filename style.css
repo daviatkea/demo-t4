@@ -525,7 +525,6 @@ img {
     gap: 0.75rem;
     html:has(&) {
       overflow: hidden;
-      background: red;
     }
   }
 }
