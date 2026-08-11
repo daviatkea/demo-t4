@@ -499,11 +499,18 @@ img {
   margin-block-start: 0.35rem;
 }
 
-dialog {
-  padding: 0;
+html:has(.program-details:popover-open) {
+  overflow: hidden;
+}
+
+.program-details {
+  box-sizing: border-box;
   border: none;
   border-radius: 12px;
-  max-inline-size: min(42rem, calc(100vw - 2rem));
+  inline-size: min(42rem, calc(100vw - 2rem));
+  max-block-size: calc(100dvh - 2rem);
+  margin: auto;
+  overflow: auto;
   background: #fefcfc;
   color: inherit;
   box-shadow:
@@ -511,25 +518,25 @@ dialog {
     0px 1.8px 2.3px -0.5px hsl(0 0% 0% / 0.07),
     0px 4.2px 5.3px -1.1px hsl(0 0% 0% / 0.09),
     0px 9.7px 12.1px -1.6px hsl(0 0% 0% / 0.1);
-}
-
-dialog::backdrop {
-  background: hsl(0 0% 0% / 0.35);
-}
-
-.dialog-content {
-  display: grid;
-  gap: 0.75rem;
   padding: 1lh;
+
+  &::backdrop {
+    background: hsl(0 0% 0% / 0.35);
+  }
+
+  &:popover-open {
+    display: grid;
+    gap: 0.75rem;
+  }
 }
 
-.dialog-content img {
+.program-details img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.dialog-content form {
+.program-details .btn {
   justify-self: start;
 }
 
