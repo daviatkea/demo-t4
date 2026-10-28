@@ -74,7 +74,7 @@ if (eventPass) {
     reasonOutput.textContent = "Ikke valgt";
   }
 
-  chipOne.textContent = interests[0] || "";
+  chipOne.textContent = interests[0] || "Dette er fallback";
   chipTwo.textContent = interests[1] || "";
   chipThree.textContent = interests[2] || "";
 
