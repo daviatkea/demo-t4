@@ -7,7 +7,7 @@ if (eventMap) {
   const thirdDetails = document.querySelector("#details-third");
 
   function updateSvgPosition() {
-    const openDetails = document.querySelector(".accordion-item[open]");
+    const openDetails = document.querySelector(".accordion-item:open");
 
     if (openDetails) {
       eventMap.dataset.position = openDetails.dataset.position;
