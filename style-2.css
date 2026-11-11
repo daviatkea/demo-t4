@@ -468,7 +468,11 @@ img {
       font-size: 1cap;
       text-box: cap alphabetic;
       color: #a7dfdc;
+      &.days {
+        font-variation-settings: "wdth" 70;
+      }
       &.month {
+        font-variation-settings: "wdth" 120;
         letter-spacing: 4px;
         color: #e1e6f0;
       }
