@@ -1380,3 +1380,24 @@ fieldset {
     object-position: top;
   }
 }
+
+header a[data-variant="filled"] {
+  animation: --o ease both;
+  animation-timeline: --t;
+  animation-range: exit -85px exit calc(100% - 85px);
+}
+
+@keyframes --o {
+  to {
+    background: oklch(0.53 0.16 296.08);
+    color: #fff;
+  }
+}
+
+body {
+  timeline-scope: --t;
+}
+
+.ctas {
+  view-timeline: --t;
+}
