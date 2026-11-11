@@ -400,8 +400,23 @@ img {
     margin-block: 0.5rlh 1rlh;
     text-fit: grow per-line-all;
     border-radius: 1.9rem 1.6rem 1.8rem 2.1rem / 2.1rem 1.2rem 0.8rem 2.1rem;
-    overflow: clip;
-    corner-shape: notch;
+    /* overflow: clip;
+    corner-shape: notch; */
+    clip-path: shape(
+      from 0 1.9rem,
+      line to 1.7rem 1.9rem,
+      line to 1.7rem -2px,
+      hline to calc(100% - 1.7rem),
+      line to calc(100% - 1.7rem) 1rem,
+      line to 100% 1rem,
+      line to 100% calc(100% - 0.5rem),
+      line to calc(100% - 1.3rem) calc(100% - 0.5rem),
+      vline to calc(100% + 2px),
+      hline to 2rem,
+      line to 2rem calc(100% - 1.8rem),
+      hline to 0,
+      close
+    );
     max-width: 12ch;
 
     + p {
