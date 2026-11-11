@@ -345,7 +345,7 @@ img {
   background: #1e274b;
   background: radial-gradient(
     ellipse at 50% 78%,
-    #1e274b,
+    oklch(0.25 0.15 291.03),
     #121424 66%,
     #1f284a
   );
