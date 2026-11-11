@@ -550,6 +550,7 @@ img {
 .articles {
   display: grid;
   gap: 1rlh;
+  align-items: start;
 
   @media (width > 700px) {
     grid-template-columns: 1fr 1fr 1fr;
@@ -563,6 +564,7 @@ img {
   border-radius: 12px;
   display: grid;
   grid-template-rows: auto 1fr;
+  rotate: random(--h element-scoped, -1.5deg, 1.5deg);
 }
 
 .card > img {
