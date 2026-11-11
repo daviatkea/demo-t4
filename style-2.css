@@ -468,7 +468,7 @@ img {
   .info {
     display: grid;
     gap: 1ex;
-    background: #0000;
+    background: #131729;
     z-index: 1;
     place-self: end;
     padding: 1rlh 1.5rlh;
