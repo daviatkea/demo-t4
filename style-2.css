@@ -447,21 +447,31 @@ img {
         smooth to 87.45% 45.02%
       );
     }
-
-    span {
-      font-weight: 900;
-      font-size: 1cap;
-      text-box: cap alphabetic;
-    }
   }
 
   .info {
-    background: #fff;
+    display: grid;
+    gap: 1ex;
+    background: #0000;
     z-index: 1;
     place-self: end;
-    padding: 1rlh 2rlh;
-    border: 1px solid #0003;
-    box-shadow: -80px 2rlh 0 0rlh #644dbb;
+    padding: 1rlh 1.5rlh;
+    border: 1px solid #99d9d3;
+    border-radius: 0.75rlh;
+    corner-shape: scoop;
+    rotate: 3deg;
+    span {
+      display: block;
+      text-fit: grow;
+      font-weight: 900;
+      font-size: 1cap;
+      text-box: cap alphabetic;
+      color: #a7dfdc;
+      &.month {
+        letter-spacing: 4px;
+        color: #e1e6f0;
+      }
+    }
   }
 
   img {
