@@ -496,6 +496,9 @@ img {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rlh;
+    .btn {
+      font-size: 1.125rem;
+    }
   }
 }
 
