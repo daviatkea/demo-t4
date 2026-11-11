@@ -357,6 +357,7 @@ img {
     curve to 0 100% with 50% calc(100% - 3rem),
     close
   );
+  isolation: isolate;
 
   .hero-content {
     grid-column: 2;
@@ -485,6 +486,8 @@ img {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: inherit;
+  padding-block-start: calc(3rlh + 3rem);
+  margin-top: -3rem;
 
   dl {
     grid-column: 2;
