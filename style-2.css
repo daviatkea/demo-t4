@@ -1319,7 +1319,7 @@ fieldset {
 /* View Transitions and scroll animation */
 .site-header {
   view-transition-name: site-header;
-  position: static !important;
+  /* position: static !important; */
 }
 
 .map-preview,
