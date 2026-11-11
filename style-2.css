@@ -343,6 +343,12 @@ img {
 /* Forside */
 .hero {
   background: #1e274b;
+  background: radial-gradient(
+    ellipse at 50% 78%,
+    #1e274b,
+    #121424 66%,
+    #1f284a
+  );
   box-shadow: none;
   outline: none;
   grid-column: 1 / -1;
