@@ -402,7 +402,7 @@ img {
     }
 
     span {
-      color: oklch(0.8 0.0075 300.22);
+      color: oklch(0.85 0.12 71.82);
     }
   }
 
@@ -455,7 +455,7 @@ img {
     place-self: end;
     padding: 1rlh 2rlh;
     border: 1px solid #0003;
-    box-shadow: -80px 2rlh 0 0rlh #4b217c;
+    box-shadow: -80px 2rlh 0 0rlh #644dbb;
   }
 
   img {
