@@ -472,10 +472,12 @@ img {
     z-index: 1;
     place-self: end;
     padding: 1rlh 1.5rlh;
-    border: 1px solid #99d9d3;
-    border-radius: 0.75rlh;
+    border: 1px solid oklch(0.5 0.04 188.67);
+    border-radius: 0.7rlh;
     corner-shape: scoop;
     rotate: 3deg;
+    outline: 1px solid #99d9d3;
+    outline-offset: -5px;
     span {
       display: block;
       text-fit: grow;
