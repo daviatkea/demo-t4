@@ -21,6 +21,18 @@ if (eventMap) {
   thirdDetails.addEventListener("toggle", updateSvgPosition);
 }
 
+// Form
+const form = document.querySelector(".pass-form");
+
+if (form) {
+  function disablePopup(event) {
+    event.preventDefault();
+    form.querySelector(":invalid").focus();
+  }
+
+  form.addEventListener("invalid", disablePopup, true);
+}
+
 // Opsamling
 const eventPass = document.querySelector(".event-pass");
 

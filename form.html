@@ -51,12 +51,13 @@
       <form class="pass-form" action="./opsamling.html">
         <div class="form-group">
           <label for="nickname">Hvad skal vi kalde dig?</label>
-          <input type="text" id="nickname" name="nickname">
+          <input type="text" id="nickname" name="nickname" required>
+          <div class="error-message">Skriv dit kælenavn</div>
         </div>
         <fieldset class="form-group">
           <legend>Hvad håber du at få ud af eventet?</legend>
           <label for="reason-inspiration">
-            <input type="radio" id="reason-inspiration" name="reason" value="inspiration">
+            <input type="radio" id="reason-inspiration" name="reason" value="inspiration" required>
             Ny inspiration
           </label>
           <label for="reason-tools">
@@ -85,7 +86,7 @@
         </fieldset>
         <div class="form-group">
           <label for="learning-style">Hvordan lærer du bedst?</label>
-          <select name="learning-style" id="learning-style">
+          <select name="learning-style" id="learning-style" required>
             <option value="visual">Visuelt</option>
             <option value="auditive">Auditivt</option>
             <option value="lbd">Learning by doing</option>
@@ -94,7 +95,7 @@
         <fieldset class="form-group style-options" data-layout="inline">
           <legend>Vælg stil til dit pass</legend>
           <label class="style-option" for="style-editorial">
-            <input type="radio" id="style-editorial" name="style" value="editorial">
+            <input type="radio" id="style-editorial" name="style" value="editorial" required>
             <span>Editorial</span>
           </label>
           <label class="style-option" for="style-playful">
@@ -113,7 +114,7 @@
         <fieldset class="form-group" data-layout="inline">
           <legend>Vælg din accentfarve</legend>
           <label for="color-red" data-color="red">
-            <input class="color-input" type="radio" id="color-red" name="color" value="red">
+            <input class="color-input" type="radio" id="color-red" name="color" value="red" required>
             <span class="visually-hidden">Rød</span>
           </label>
           <label for="color-lime" data-color="lime">

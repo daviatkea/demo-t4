@@ -868,6 +868,32 @@ label:not(fieldset > *) {
   gap: 0.5ch;
 }
 
+.error-message {
+  color: crimson;
+  display: none;
+  transition: none;
+}
+
+.form-group:has(input:focus) .error-message {
+  transition: display 0s calc(infinity * 1s) allow-discrete;
+}
+
+.form-group:has(:user-invalid) {
+  input {
+    border-color: crimson;
+  }
+  .error-message {
+    display: block;
+    transition: none;
+  }
+}
+
+.form-group:has(:user-valid) {
+  input {
+    border-color: green;
+  }
+}
+
 input[type="text"],
 select {
   background: #fff;
